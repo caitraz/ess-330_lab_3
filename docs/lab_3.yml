@@ -1,7 +1,18 @@
-project:
+website:
   title: "ess-330_lab_3"
   output-dir: docs
   
 format:
   html:
-  self-contained: true
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+editor: visual
+
+project:
+  type: website
+  output-dir: docs
+  
+self-contained: true
+
