@@ -52,13 +52,13 @@ filter(colorado, date == my.date) |>
   slice_max(cases, n = 5) |>
   select(Date = date, County = county, Cases = cases) |>
   flextable() |>
-  set_caption("Most Total Cases")
+  add_header_lines("Most Total Cases")
 
 filter(colorado, date == my.date) |>
   slice_max(cases, n = 5) |>
   select(Date = date, County = county, Cases = new_cases) |>
   flextable() |>
-  set_caption("Most New Cases")
+  add_header_lines("Most New Cases")
 ```
 # Question #3
 ```{r}
@@ -121,13 +121,13 @@ filter(combined_data, date == my.date) |>
   slice_max(percap_CUM_cases, n = 5) |>
   select(Date = date, County = CTYNAME.x, Cases = percap_CUM_cases) |>
   flextable() |>
-  set_caption("Most Cumulative Cases Per Capita")
+  add_header_lines("Most Cumulative Cases Per Capita")
 
 filter(combined_data, date == my.date) |>
   slice_max(percap_NEW_cases, n = 5) |>
   select(Date = date, County = CTYNAME.x, Cases = percap_NEW_cases) |>
   flextable() |>
-  set_caption("Most New Cases Per Capita")
+  add_header_lines("Most New Cases Per Capita")
 ```
 # Question #4
 ```{r}
